@@ -10,4 +10,4 @@ Personen:
 	- Mujic Haris
 	- Pucher Jonas
 
-Arbeitszeit: 11x7 Schulstunden
+Arbeitszeit: 11x8 Schulstunden
