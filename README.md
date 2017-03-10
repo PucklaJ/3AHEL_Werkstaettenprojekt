@@ -1,2 +1,13 @@
 # 3AHEL_Werkstaettenprojekt
-Source-Code für unser Werkstättenprojekt (LED-Matrix-Konsole)
+Hier findet man alle Dateien für unser Werktättenprojekt
+
+Jahrgang: 2016/17
+Personen:
+	- Auer Julian
+	- Bauer Roman
+	- Karayanov Vitaliy
+	- Kerschner Luca
+	- Mujic Haris
+	- Pucher Jonas
+
+Arbeitszeit: 11x7 Schulstunden
