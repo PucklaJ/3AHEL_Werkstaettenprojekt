@@ -1,2 +1,0 @@
-$EAGLEDIR\lbr;E:\Projekt\Eagle_Verzeichnisse\Bibliotheken\eigene;E:\Projekt\Eagle_Verzeichnisse\Bibliotheken\heruntergeladene
-$HOME\eagle;$EAGLEDIR\projects\examples;E:\Projekt\Eagle_Verzeichnisse\Projekte
