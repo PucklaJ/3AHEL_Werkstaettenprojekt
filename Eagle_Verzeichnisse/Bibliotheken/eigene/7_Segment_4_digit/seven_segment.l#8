@@ -83,11 +83,11 @@
 <pad name="P$5" x="28.1178" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
 <pad name="P$6" x="30.6578" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
 <pad name="P$7" x="33.1978" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$8" x="0.5842" y="18.5928" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$9" x="3.1242" y="18.5928" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$10" x="5.6642" y="18.5928" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$11" x="8.4582" y="18.5928" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$12" x="10.9982" y="18.5928" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$8" x="19.2278" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$9" x="21.7678" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$10" x="24.3078" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$11" x="27.1018" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$12" x="29.6418" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
 </package>
 </packages>
 <symbols>

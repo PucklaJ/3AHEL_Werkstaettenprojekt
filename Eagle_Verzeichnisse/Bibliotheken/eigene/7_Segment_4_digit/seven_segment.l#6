@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.001" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -76,18 +76,18 @@
 <wire x1="0" y1="0" x2="0" y2="19.1008" width="0.127" layer="21"/>
 <wire x1="0" y1="19.1008" x2="51.054" y2="19.1008" width="0.127" layer="21"/>
 <wire x1="51.054" y1="19.1008" x2="51.054" y2="0" width="0.127" layer="21"/>
-<pad name="P$1" x="17.9578" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$2" x="20.4978" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$3" x="23.0378" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$4" x="25.5778" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$5" x="28.1178" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$6" x="30.6578" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$7" x="33.1978" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$8" x="20.5232" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$9" x="23.0632" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$10" x="25.6032" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$11" x="28.1432" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$12" x="30.6832" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="E" x="17.9578" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="D" x="20.4978" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="DP" x="23.0378" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="C" x="25.5778" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="G" x="28.1178" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="CC4" x="30.6578" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="B" x="33.1978" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="CC1" x="20.5232" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="A" x="23.0632" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="F" x="25.6032" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="CC2" x="28.1432" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="CC3" x="30.6832" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
 </package>
 </packages>
 <symbols>
@@ -113,9 +113,10 @@
 <devicesets>
 <deviceset name="7SEG_DEV">
 <gates>
+<gate name="G$1" symbol="7SEG_SYM" x="5.08" y="-2.54"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="7SEG_PACK">
 <technologies>
 <technology name=""/>
 </technologies>

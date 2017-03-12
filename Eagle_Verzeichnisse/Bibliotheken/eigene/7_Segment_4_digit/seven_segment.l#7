@@ -76,18 +76,18 @@
 <wire x1="0" y1="0" x2="0" y2="19.1008" width="0.127" layer="21"/>
 <wire x1="0" y1="19.1008" x2="51.054" y2="19.1008" width="0.127" layer="21"/>
 <wire x1="51.054" y1="19.1008" x2="51.054" y2="0" width="0.127" layer="21"/>
-<pad name="P$1" x="17.9578" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$2" x="20.4978" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$3" x="23.0378" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$4" x="25.5778" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$5" x="28.1178" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$6" x="30.6578" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$7" x="33.1978" y="0.6858" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$8" x="19.2278" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$9" x="21.7678" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$10" x="24.3078" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$11" x="27.1018" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
-<pad name="P$12" x="29.6418" y="18.3642" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$1" x="17.9578" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$2" x="20.4978" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$3" x="23.0378" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$4" x="25.5778" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$5" x="28.1178" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$6" x="30.6578" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$7" x="33.1978" y="1.9304" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$8" x="20.5232" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$9" x="23.0632" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$10" x="25.6032" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$11" x="28.1432" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
+<pad name="P$12" x="30.6832" y="17.1704" drill="0.635" diameter="1.016" shape="square"/>
 </package>
 </packages>
 <symbols>

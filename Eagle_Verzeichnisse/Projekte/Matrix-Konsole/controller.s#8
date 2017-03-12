@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -459,56 +459,6 @@ RJ45 Jack connectors&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="button">
-<packages>
-<package name="BUTTON_PACK">
-<wire x1="0" y1="-6" x2="-6" y2="0" width="0.1" layer="21" curve="-90"/>
-<wire x1="-6" y1="0" x2="0" y2="6" width="0.1" layer="21" curve="-90"/>
-<pad name="P2'" x="3.4" y="-2.6" drill="0.8" shape="square"/>
-<pad name="P2" x="-1.6" y="-2.6" drill="0.8" shape="square"/>
-<pad name="P1" x="-1.6" y="2.4" drill="0.8" shape="square"/>
-<pad name="P1'" x="3.4" y="2.4" drill="0.8" shape="square"/>
-<wire x1="5.4" y1="2.9" x2="5.4" y2="-3.2" width="0.1" layer="21"/>
-<wire x1="0" y1="6" x2="5.4" y2="2.9" width="0.1" layer="21" curve="-59.718039"/>
-<wire x1="0" y1="-6" x2="5.4" y2="-3.2" width="0.1" layer="21" curve="54.815145"/>
-</package>
-</packages>
-<symbols>
-<symbol name="BUTTON_SYM">
-<wire x1="-2.54" y1="0" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="2.54" y1="7.62" x2="2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="7.62" width="0.254" layer="94" style="shortdash"/>
-<pin name="P2" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
-<pin name="P1" x="-7.62" y="0" visible="off" length="middle"/>
-<text x="-4.52" y="8.42" size="1.778" layer="95">&gt;Name</text>
-<text x="-6.3" y="0.5" size="1.778" layer="95">P1</text>
-<text x="3.5" y="0.5" size="1.778" layer="95">P2</text>
-<wire x1="-2.54" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BUTTON_DEV" prefix="BUT">
-<gates>
-<gate name="G$1" symbol="BUTTON_SYM" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="BUTTON_PACK">
-<connects>
-<connect gate="G$1" pin="P1" pad="P1 P1'"/>
-<connect gate="G$1" pin="P2" pad="P2 P2'"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -521,12 +471,6 @@ RJ45 Jack connectors&lt;br&gt;
 <parts>
 <part name="IC1" library="74xx-eu" deviceset="74*165" device="D" technology="HC"/>
 <part name="X1" library="con-amp" deviceset="USB-787616" device=""/>
-<part name="BUT1" library="button" deviceset="BUTTON_DEV" device=""/>
-<part name="BUT2" library="button" deviceset="BUTTON_DEV" device=""/>
-<part name="BUT3" library="button" deviceset="BUTTON_DEV" device=""/>
-<part name="BUT4" library="button" deviceset="BUTTON_DEV" device=""/>
-<part name="BUT5" library="button" deviceset="BUTTON_DEV" device=""/>
-<part name="BUT6" library="button" deviceset="BUTTON_DEV" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -535,12 +479,6 @@ RJ45 Jack connectors&lt;br&gt;
 <instances>
 <instance part="IC1" gate="A" x="99.06" y="48.26"/>
 <instance part="X1" gate="G$1" x="63.5" y="45.72"/>
-<instance part="BUT1" gate="G$1" x="127" y="33.02"/>
-<instance part="BUT2" gate="G$1" x="127" y="17.78"/>
-<instance part="BUT3" gate="G$1" x="127" y="2.54"/>
-<instance part="BUT4" gate="G$1" x="127" y="-12.7"/>
-<instance part="BUT5" gate="G$1" x="149.86" y="33.02"/>
-<instance part="BUT6" gate="G$1" x="149.86" y="17.78"/>
 </instances>
 <busses>
 </busses>

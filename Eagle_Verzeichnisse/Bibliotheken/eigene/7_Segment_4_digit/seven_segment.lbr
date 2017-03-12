@@ -108,6 +108,7 @@
 <pin name="CC2" x="-17.78" y="0" length="middle"/>
 <pin name="CC3" x="-17.78" y="-5.08" length="middle"/>
 <pin name="CC4" x="-17.78" y="-10.16" length="middle"/>
+<text x="-9.906" y="18.796" size="1.778" layer="95">&gt;Name</text>
 </symbol>
 </symbols>
 <devicesets>
