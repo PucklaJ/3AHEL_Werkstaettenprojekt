@@ -1,0 +1,5 @@
+74HC165 - Schieberegister für Kontroller
+https://www.youtube.com/watch?v=hR6qOhUeKMc&t=2s
+
+74HC595 - Schieberegister für 7 Segment
+https://www.youtube.com/watch?v=2Cs4IFqiVW8
