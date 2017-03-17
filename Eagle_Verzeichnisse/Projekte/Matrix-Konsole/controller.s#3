@@ -4007,7 +4007,7 @@ Grid 2.54 mm&lt;p&gt;
 <instance part="X1" gate="-3" x="-60.96" y="55.88" rot="R180"/>
 <instance part="X1" gate="-4" x="-60.96" y="58.42" rot="R180"/>
 <instance part="X1" gate="-5" x="-60.96" y="60.96" rot="R180"/>
-<instance part="GND9" gate="1" x="-33.02" y="60.96" rot="R90"/>
+<instance part="GND9" gate="1" x="-35.56" y="63.5"/>
 </instances>
 <busses>
 </busses>
@@ -4060,7 +4060,9 @@ Grid 2.54 mm&lt;p&gt;
 </segment>
 <segment>
 <pinref part="X1" gate="-5" pin="1"/>
-<wire x1="-58.42" y1="60.96" x2="-35.56" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="60.96" x2="-58.42" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="68.58" x2="-35.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="68.58" x2="-35.56" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 </net>
@@ -4102,8 +4104,8 @@ Grid 2.54 mm&lt;p&gt;
 </segment>
 <segment>
 <pinref part="X1" gate="-4" pin="1"/>
-<wire x1="-58.42" y1="58.42" x2="-48.26" y2="58.42" width="0.1524" layer="91"/>
-<label x="-48.26" y="58.42" size="1.778" layer="95" xref="yes"/>
+<wire x1="-58.42" y1="58.42" x2="-35.56" y2="58.42" width="0.1524" layer="91"/>
+<label x="-35.56" y="58.42" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="D0" class="0">
