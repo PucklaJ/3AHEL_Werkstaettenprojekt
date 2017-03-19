@@ -9192,7 +9192,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="45.72" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MEGA_A0" class="0">
+<net name="MEGA_A9" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="23"/>
 <wire x1="53.34" y1="73.66" x2="45.72" y2="73.66" width="0.1524" layer="91"/>

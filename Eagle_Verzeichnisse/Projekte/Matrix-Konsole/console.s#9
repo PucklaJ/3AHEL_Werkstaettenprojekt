@@ -8394,8 +8394,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="X1" gate="-1" x="-5.08" y="104.14"/>
 <instance part="X1" gate="-2" x="-5.08" y="99.06"/>
 <instance part="GND4" gate="1" x="15.24" y="91.44"/>
-<instance part="7SEG1" gate="G$1" x="193.04" y="-63.5"/>
-<instance part="7SEG2" gate="G$1" x="266.7" y="-66.04"/>
+<instance part="7SEG1" gate="G$1" x="83.82" y="-15.24"/>
+<instance part="7SEG2" gate="G$1" x="157.48" y="-17.78"/>
 <instance part="R2" gate="G$1" x="157.48" y="149.86"/>
 <instance part="U$2" gate="G$1" x="231.14" y="2.54"/>
 <instance part="X2" gate="-1" x="109.22" y="116.84"/>
@@ -8600,8 +8600,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="A" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="A"/>
-<wire x1="200.66" y1="-48.26" x2="208.28" y2="-48.26" width="0.1524" layer="91"/>
-<label x="208.28" y="-48.26" size="1.778" layer="95" xref="yes"/>
+<wire x1="91.44" y1="0" x2="99.06" y2="0" width="0.1524" layer="91"/>
+<label x="99.06" y="0" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="0" x2="251.46" y2="0" width="0.1524" layer="91"/>
@@ -8610,20 +8610,20 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="A"/>
-<wire x1="274.32" y1="-50.8" x2="281.94" y2="-50.8" width="0.1524" layer="91"/>
-<label x="281.94" y="-50.8" size="1.778" layer="95" xref="yes"/>
+<wire x1="165.1" y1="-2.54" x2="172.72" y2="-2.54" width="0.1524" layer="91"/>
+<label x="172.72" y="-2.54" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="B" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="B"/>
-<wire x1="200.66" y1="-53.34" x2="208.28" y2="-53.34" width="0.1524" layer="91"/>
-<label x="208.28" y="-53.34" size="1.778" layer="95" xref="yes"/>
+<wire x1="91.44" y1="-5.08" x2="99.06" y2="-5.08" width="0.1524" layer="91"/>
+<label x="99.06" y="-5.08" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="B"/>
-<wire x1="274.32" y1="-55.88" x2="281.94" y2="-55.88" width="0.1524" layer="91"/>
-<label x="281.94" y="-55.88" size="1.778" layer="95" xref="yes"/>
+<wire x1="165.1" y1="-7.62" x2="172.72" y2="-7.62" width="0.1524" layer="91"/>
+<label x="172.72" y="-7.62" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-2.54" x2="251.46" y2="-2.54" width="0.1524" layer="91"/>
@@ -8634,13 +8634,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="C" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="C"/>
-<wire x1="200.66" y1="-58.42" x2="208.28" y2="-58.42" width="0.1524" layer="91"/>
-<label x="208.28" y="-58.42" size="1.778" layer="95" xref="yes"/>
+<wire x1="91.44" y1="-10.16" x2="99.06" y2="-10.16" width="0.1524" layer="91"/>
+<label x="99.06" y="-10.16" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="C"/>
-<wire x1="274.32" y1="-60.96" x2="281.94" y2="-60.96" width="0.1524" layer="91"/>
-<label x="281.94" y="-60.96" size="1.778" layer="95" xref="yes"/>
+<wire x1="165.1" y1="-12.7" x2="172.72" y2="-12.7" width="0.1524" layer="91"/>
+<label x="172.72" y="-12.7" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-5.08" x2="251.46" y2="-5.08" width="0.1524" layer="91"/>
@@ -8651,13 +8651,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="D" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="D"/>
-<wire x1="200.66" y1="-63.5" x2="208.28" y2="-63.5" width="0.1524" layer="91"/>
-<label x="208.28" y="-63.5" size="1.778" layer="95" xref="yes"/>
+<wire x1="91.44" y1="-15.24" x2="99.06" y2="-15.24" width="0.1524" layer="91"/>
+<label x="99.06" y="-15.24" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="D"/>
-<wire x1="281.94" y1="-66.04" x2="274.32" y2="-66.04" width="0.1524" layer="91"/>
-<label x="281.94" y="-66.04" size="1.778" layer="95" xref="yes"/>
+<wire x1="172.72" y1="-17.78" x2="165.1" y2="-17.78" width="0.1524" layer="91"/>
+<label x="172.72" y="-17.78" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-7.62" x2="251.46" y2="-7.62" width="0.1524" layer="91"/>
@@ -8668,13 +8668,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="E" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="E"/>
-<wire x1="200.66" y1="-68.58" x2="208.28" y2="-68.58" width="0.1524" layer="91"/>
-<label x="208.28" y="-68.58" size="1.778" layer="95" xref="yes"/>
+<wire x1="91.44" y1="-20.32" x2="99.06" y2="-20.32" width="0.1524" layer="91"/>
+<label x="99.06" y="-20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="E"/>
-<wire x1="274.32" y1="-71.12" x2="281.94" y2="-71.12" width="0.1524" layer="91"/>
-<label x="281.94" y="-71.12" size="1.778" layer="95" xref="yes"/>
+<wire x1="165.1" y1="-22.86" x2="172.72" y2="-22.86" width="0.1524" layer="91"/>
+<label x="172.72" y="-22.86" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-10.16" x2="251.46" y2="-10.16" width="0.1524" layer="91"/>
@@ -8685,13 +8685,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="F" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="F"/>
-<wire x1="200.66" y1="-73.66" x2="208.28" y2="-73.66" width="0.1524" layer="91"/>
-<label x="208.28" y="-73.66" size="1.778" layer="95" xref="yes"/>
+<wire x1="91.44" y1="-25.4" x2="99.06" y2="-25.4" width="0.1524" layer="91"/>
+<label x="99.06" y="-25.4" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="F"/>
-<wire x1="274.32" y1="-76.2" x2="281.94" y2="-76.2" width="0.1524" layer="91"/>
-<label x="281.94" y="-76.2" size="1.778" layer="95" xref="yes"/>
+<wire x1="165.1" y1="-27.94" x2="172.72" y2="-27.94" width="0.1524" layer="91"/>
+<label x="172.72" y="-27.94" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-12.7" x2="251.46" y2="-12.7" width="0.1524" layer="91"/>
@@ -8702,13 +8702,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="G" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="G"/>
-<wire x1="175.26" y1="-48.26" x2="167.64" y2="-48.26" width="0.1524" layer="91"/>
-<label x="167.64" y="-48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="0" x2="58.42" y2="0" width="0.1524" layer="91"/>
+<label x="58.42" y="0" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="G"/>
-<wire x1="248.92" y1="-50.8" x2="241.3" y2="-50.8" width="0.1524" layer="91"/>
-<label x="241.3" y="-50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="139.7" y1="-2.54" x2="132.08" y2="-2.54" width="0.1524" layer="91"/>
+<label x="132.08" y="-2.54" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-15.24" x2="251.46" y2="-15.24" width="0.1524" layer="91"/>
@@ -8719,13 +8719,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="DP" class="0">
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="DP"/>
-<wire x1="175.26" y1="-53.34" x2="167.64" y2="-53.34" width="0.1524" layer="91"/>
-<label x="167.64" y="-53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="-5.08" x2="58.42" y2="-5.08" width="0.1524" layer="91"/>
+<label x="58.42" y="-5.08" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="DP"/>
-<wire x1="248.92" y1="-55.88" x2="241.3" y2="-55.88" width="0.1524" layer="91"/>
-<label x="241.3" y="-55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="139.7" y1="-7.62" x2="132.08" y2="-7.62" width="0.1524" layer="91"/>
+<label x="132.08" y="-7.62" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="-17.78" x2="251.46" y2="-17.78" width="0.1524" layer="91"/>
@@ -8741,8 +8741,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="CC1"/>
-<wire x1="175.26" y1="-58.42" x2="167.64" y2="-58.42" width="0.1524" layer="91"/>
-<label x="167.64" y="-58.42" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="-10.16" x2="58.42" y2="-10.16" width="0.1524" layer="91"/>
+<label x="58.42" y="-10.16" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG1" class="0">
@@ -8753,8 +8753,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="CC2"/>
-<wire x1="175.26" y1="-63.5" x2="167.64" y2="-63.5" width="0.1524" layer="91"/>
-<label x="167.64" y="-63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="-15.24" x2="58.42" y2="-15.24" width="0.1524" layer="91"/>
+<label x="58.42" y="-15.24" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG2" class="0">
@@ -8765,8 +8765,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="CC3"/>
-<wire x1="175.26" y1="-68.58" x2="167.64" y2="-68.58" width="0.1524" layer="91"/>
-<label x="167.64" y="-68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="-20.32" x2="58.42" y2="-20.32" width="0.1524" layer="91"/>
+<label x="58.42" y="-20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG3" class="0">
@@ -8777,8 +8777,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG1" gate="G$1" pin="CC4"/>
-<wire x1="175.26" y1="-73.66" x2="167.64" y2="-73.66" width="0.1524" layer="91"/>
-<label x="167.64" y="-73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="-25.4" x2="58.42" y2="-25.4" width="0.1524" layer="91"/>
+<label x="58.42" y="-25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG4" class="0">
@@ -8789,8 +8789,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="CC1"/>
-<wire x1="248.92" y1="-60.96" x2="241.3" y2="-60.96" width="0.1524" layer="91"/>
-<label x="241.3" y="-60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="139.7" y1="-12.7" x2="132.08" y2="-12.7" width="0.1524" layer="91"/>
+<label x="132.08" y="-12.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG5" class="0">
@@ -8801,8 +8801,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="CC2"/>
-<wire x1="248.92" y1="-66.04" x2="241.3" y2="-66.04" width="0.1524" layer="91"/>
-<label x="241.3" y="-66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="139.7" y1="-17.78" x2="132.08" y2="-17.78" width="0.1524" layer="91"/>
+<label x="132.08" y="-17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG6" class="0">
@@ -8813,8 +8813,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="CC3"/>
-<wire x1="248.92" y1="-71.12" x2="241.3" y2="-71.12" width="0.1524" layer="91"/>
-<label x="241.3" y="-71.12" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="139.7" y1="-22.86" x2="132.08" y2="-22.86" width="0.1524" layer="91"/>
+<label x="132.08" y="-22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIG7" class="0">
@@ -8825,8 +8825,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="7SEG2" gate="G$1" pin="CC4"/>
-<wire x1="248.92" y1="-76.2" x2="241.3" y2="-76.2" width="0.1524" layer="91"/>
-<label x="241.3" y="-76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="139.7" y1="-27.94" x2="132.08" y2="-27.94" width="0.1524" layer="91"/>
+<label x="132.08" y="-27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MAX_CLK" class="0">

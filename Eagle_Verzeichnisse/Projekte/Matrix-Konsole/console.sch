@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.0.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -8254,7 +8254,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="J4" library="SparkFun-Connectors" deviceset="DIN5" device=""/>
 <part name="U$1" library="Matrix" deviceset="32X32MATRIX_DEV" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X4" device=""/>
-<part name="R3" library="resistor" deviceset="R-EU_" device="M3516" value="2,7"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="M3516" value="10"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="D1" library="diode" deviceset="ZENER-DIODE" device="DO35Z10" value="5V"/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X25" device=""/>
