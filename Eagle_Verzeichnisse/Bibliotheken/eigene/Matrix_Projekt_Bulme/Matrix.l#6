@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.0.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -91,34 +91,30 @@
 <pad name="P$14" x="0" y="-7.62" drill="0.8" shape="square"/>
 <pad name="P$15" x="0" y="-10.16" drill="0.8" shape="square"/>
 <pad name="P$16" x="0" y="-12.7" drill="0.8" shape="square"/>
-<pad name="P$17" x="-3.81" y="-15.24" drill="0.8" shape="square"/>
-<pad name="P$18" x="0" y="-15.24" drill="0.8" shape="square"/>
 </package>
 </packages>
 <symbols>
 <symbol name="32X32MATRIX_SYM">
-<wire x1="7.62" y1="22.86" x2="7.62" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-22.86" x2="-7.62" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-22.86" x2="-7.62" y2="22.86" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="22.86" x2="7.62" y2="22.86" width="0.254" layer="94"/>
-<pin name="G1" x="12.7" y="20.32" visible="pin" length="middle" rot="R180"/>
-<pin name="GND1" x="12.7" y="15.24" visible="pin" length="middle" rot="R180"/>
-<pin name="G2" x="12.7" y="10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="GND2" x="12.7" y="5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="B" x="12.7" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="D" x="12.7" y="-5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="LAT" x="12.7" y="-10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="GND3" x="12.7" y="-15.24" visible="pin" length="middle" rot="R180"/>
-<pin name="R1" x="-12.7" y="20.32" visible="pin" length="middle"/>
-<pin name="B1" x="-12.7" y="15.24" visible="pin" length="middle"/>
-<pin name="R2" x="-12.7" y="10.16" visible="pin" length="middle"/>
-<pin name="B2" x="-12.7" y="5.08" visible="pin" length="middle"/>
-<pin name="A" x="-12.7" y="0" visible="pin" length="middle"/>
-<pin name="C" x="-12.7" y="-5.08" visible="pin" length="middle"/>
-<pin name="CLK" x="-12.7" y="-10.16" visible="pin" length="middle"/>
-<pin name="OE" x="-12.7" y="-15.24" visible="pin" length="middle"/>
-<pin name="VCC" x="12.7" y="-20.32" visible="pin" length="middle" rot="R180"/>
-<pin name="GND4" x="-12.7" y="-20.32" visible="pin" length="middle"/>
+<wire x1="-30.48" y1="20.32" x2="10.16" y2="20.32" width="0.254" layer="94"/>
+<wire x1="10.16" y1="20.32" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-30.48" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="5.08" x2="-30.48" y2="20.32" width="0.254" layer="94"/>
+<pin name="G1" x="-27.94" y="25.4" length="middle" rot="R270"/>
+<pin name="GND1" x="-22.86" y="25.4" length="middle" rot="R270"/>
+<pin name="G2" x="-17.78" y="25.4" length="middle" rot="R270"/>
+<pin name="GND2" x="-12.7" y="25.4" length="middle" rot="R270"/>
+<pin name="B" x="-7.62" y="25.4" length="middle" rot="R270"/>
+<pin name="D" x="-2.54" y="25.4" length="middle" rot="R270"/>
+<pin name="LAT" x="2.54" y="25.4" length="middle" rot="R270"/>
+<pin name="GND3" x="7.62" y="25.4" length="middle" rot="R270"/>
+<pin name="R1" x="-27.94" y="0" length="middle" rot="R90"/>
+<pin name="B1" x="-22.86" y="0" length="middle" rot="R90"/>
+<pin name="R2" x="-17.78" y="0" length="middle" rot="R90"/>
+<pin name="B2" x="-12.7" y="0" length="middle" rot="R90"/>
+<pin name="A" x="-7.62" y="0" length="middle" rot="R90"/>
+<pin name="C" x="-2.54" y="0" length="middle" rot="R90"/>
+<pin name="CLK" x="2.54" y="0" length="middle" rot="R90"/>
+<pin name="OE" x="7.62" y="0" length="middle" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -141,12 +137,10 @@
 <connect gate="G$1" pin="GND1" pad="P$10"/>
 <connect gate="G$1" pin="GND2" pad="P$11"/>
 <connect gate="G$1" pin="GND3" pad="P$12"/>
-<connect gate="G$1" pin="GND4" pad="P$17"/>
 <connect gate="G$1" pin="LAT" pad="P$13"/>
 <connect gate="G$1" pin="OE" pad="P$14"/>
 <connect gate="G$1" pin="R1" pad="P$15"/>
 <connect gate="G$1" pin="R2" pad="P$16"/>
-<connect gate="G$1" pin="VCC" pad="P$18"/>
 </connects>
 <technologies>
 <technology name=""/>
