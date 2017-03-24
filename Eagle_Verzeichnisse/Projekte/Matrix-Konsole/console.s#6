@@ -4901,83 +4901,43 @@ For more information on the pinout and electrical specifications of MIDI communi
 </deviceset>
 </devicesets>
 </library>
-<library name="linear">
-<description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
-Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<library name="Spannungsregler">
 <packages>
-<package name="TO263-5">
-<description>&lt;b&gt;TO-263&lt;/b&gt;</description>
-<wire x1="5.094" y1="7.165" x2="5.094" y2="-2.88" width="0.2032" layer="51"/>
-<wire x1="5.094" y1="-2.88" x2="-5.094" y2="-2.88" width="0.2032" layer="21"/>
-<wire x1="-5.094" y1="-2.88" x2="-5.094" y2="7.165" width="0.2032" layer="51"/>
-<wire x1="-5.094" y1="7.165" x2="5.094" y2="7.165" width="0.2032" layer="51"/>
-<wire x1="-5.105" y1="7.267" x2="-5.105" y2="7.678" width="0.2032" layer="51"/>
-<wire x1="-5.105" y1="7.678" x2="-3.378" y2="8.135" width="0.2032" layer="51"/>
-<wire x1="-3.378" y1="8.135" x2="3.378" y2="8.135" width="0.2032" layer="51"/>
-<wire x1="3.378" y1="8.135" x2="5.105" y2="7.678" width="0.2032" layer="51"/>
-<wire x1="5.105" y1="7.678" x2="5.105" y2="7.267" width="0.2032" layer="51"/>
-<wire x1="5.105" y1="7.267" x2="-5.105" y2="7.267" width="0.2032" layer="51"/>
-<smd name="6" x="0" y="2.54" dx="10.8" dy="10.41" layer="1"/>
-<smd name="1" x="-3.4036" y="-5.7912" dx="1.0668" dy="2.159" layer="1"/>
-<smd name="2" x="-1.7018" y="-5.7912" dx="1.0668" dy="2.159" layer="1"/>
-<smd name="3" x="0" y="-5.7912" dx="1.0668" dy="2.159" layer="1"/>
-<smd name="4" x="1.7018" y="-5.7912" dx="1.0668" dy="2.159" layer="1"/>
-<smd name="5" x="3.4036" y="-5.7912" dx="1.0668" dy="2.159" layer="1"/>
-<text x="-5.588" y="-5.588" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="6.858" y="-5.588" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-3.8862" y1="-6.604" x2="-2.921" y2="-4.445" layer="51"/>
-<rectangle x1="-3.8862" y1="-4.4704" x2="-2.921" y2="-2.794" layer="21"/>
-<rectangle x1="-2.1844" y1="-6.604" x2="-1.2192" y2="-4.445" layer="51"/>
-<rectangle x1="-0.4826" y1="-6.604" x2="0.4826" y2="-4.445" layer="51"/>
-<rectangle x1="1.2192" y1="-6.604" x2="2.1844" y2="-4.445" layer="51"/>
-<rectangle x1="2.921" y1="-6.604" x2="3.8862" y2="-4.445" layer="51"/>
-<rectangle x1="-2.1844" y1="-4.4704" x2="-1.2192" y2="-2.794" layer="21"/>
-<rectangle x1="-0.4826" y1="-4.4704" x2="0.4826" y2="-2.794" layer="21"/>
-<rectangle x1="1.2192" y1="-4.4704" x2="2.1844" y2="-2.794" layer="21"/>
-<rectangle x1="2.921" y1="-4.4704" x2="3.8862" y2="-2.794" layer="21"/>
-<polygon width="0.2032" layer="51">
-<vertex x="-5.1054" y="7.267"/>
-<vertex x="-5.1054" y="7.6782"/>
-<vertex x="-3.3782" y="8.1354"/>
-<vertex x="3.3782" y="8.1354"/>
-<vertex x="5.1054" y="7.6782"/>
-<vertex x="5.1054" y="7.267"/>
-</polygon>
+<package name="SPGRGL_PACK">
+<wire x1="-24.5" y1="12" x2="25" y2="12" width="0.127" layer="21"/>
+<wire x1="25" y1="12" x2="25" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="25" y1="-11.5" x2="-24.5" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="-24.5" y1="-11.5" x2="-24.5" y2="12" width="0.127" layer="21"/>
+<pad name="IN+" x="-22.5" y="10" drill="0.8" shape="square"/>
+<pad name="OUT+" x="22.5" y="10" drill="0.8" shape="square"/>
+<pad name="OUT-" x="22.5" y="-10" drill="0.8" shape="square"/>
+<pad name="IN-" x="-22" y="-9.5" drill="0.8" shape="square"/>
 </package>
 </packages>
 <symbols>
-<symbol name="LM2596">
-<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="5.08" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
-<text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="6.35" size="1.778" layer="96">&gt;VALUE</text>
-<text x="0" y="-6.35" size="1.4224" layer="95">GND</text>
-<pin name="IN" x="-10.16" y="2.54" length="short" direction="in"/>
-<pin name="OUT" x="10.16" y="2.54" length="short" direction="out" rot="R180"/>
-<pin name="GND" x="0" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
-<pin name="FB" x="10.16" y="-2.54" length="short" direction="in" rot="R180"/>
-<pin name="EN" x="-10.16" y="-2.54" length="short" direction="in"/>
-<pin name="GND@1" x="2.54" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<symbol name="SPGRGL_SYM">
+<wire x1="-5.5" y1="4.5" x2="5" y2="4.5" width="0.254" layer="94"/>
+<wire x1="5" y1="4.5" x2="5" y2="-4.5" width="0.254" layer="94"/>
+<wire x1="5" y1="-4.5" x2="-5.5" y2="-4.5" width="0.254" layer="94"/>
+<wire x1="-5.5" y1="-4.5" x2="-5.5" y2="4.5" width="0.254" layer="94"/>
+<pin name="IN+" x="-10.5" y="3.5" visible="pad" length="middle"/>
+<pin name="IN-" x="-10.5" y="-3" visible="pad" length="middle"/>
+<pin name="OUT+" x="10" y="3.5" visible="pad" length="middle" rot="R180"/>
+<pin name="OUT-" x="10" y="-3" visible="pad" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LM2596S" prefix="IC" uservalue="yes">
-<description>&lt;b&gt;STEP-DOWN VOLTAGE REGULATOR&lt;/b&gt;</description>
+<deviceset name="SPGRGL_DEV">
 <gates>
-<gate name="G$1" symbol="LM2596" x="0" y="0"/>
+<gate name="G$1" symbol="SPGRGL_SYM" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TO263-5">
+<device name="" package="SPGRGL_PACK">
 <connects>
-<connect gate="G$1" pin="EN" pad="5"/>
-<connect gate="G$1" pin="FB" pad="4"/>
-<connect gate="G$1" pin="GND" pad="3"/>
-<connect gate="G$1" pin="GND@1" pad="6"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="2"/>
+<connect gate="G$1" pin="IN+" pad="IN+"/>
+<connect gate="G$1" pin="IN-" pad="IN-"/>
+<connect gate="G$1" pin="OUT+" pad="OUT+"/>
+<connect gate="G$1" pin="OUT-" pad="OUT-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5011,7 +4971,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="J4" library="SparkFun-Connectors" deviceset="DIN5" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X4" device=""/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X25" device=""/>
-<part name="IC1" library="linear" deviceset="LM2596S" device=""/>
+<part name="U$1" library="Spannungsregler" deviceset="SPGRGL_DEV" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5048,7 +5008,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="J4" gate="G$1" x="307.34" y="63.5"/>
 <instance part="JP2" gate="A" x="175.26" y="25.4"/>
 <instance part="JP1" gate="A" x="55.88" y="99.06"/>
-<instance part="IC1" gate="G$1" x="134.62" y="30.48"/>
+<instance part="U$1" gate="G$1" x="144.78" y="27.94"/>
 </instances>
 <busses>
 </busses>
@@ -5635,20 +5595,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <label x="45.72" y="71.12" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="JP2" gate="A" pin="1"/>
-<wire x1="172.72" y1="30.48" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="172.72" y1="27.94" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="27.94" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="GND@1"/>
-<wire x1="137.16" y1="20.32" x2="149.86" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="20.32" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="30.48" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
-<junction x="167.64" y="30.48"/>
-</segment>
-</net>
 <net name="MEGA_GND" class="0">
 <segment>
 <pinref part="X2" gate="-4" pin="S"/>
@@ -5718,14 +5664,39 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <pinref part="JP2" gate="A" pin="3"/>
 <wire x1="172.72" y1="25.4" x2="167.64" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="25.4" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="24.94" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="4"/>
 <wire x1="172.72" y1="22.86" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="OUT"/>
-<wire x1="144.78" y1="33.02" x2="165.1" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="33.02" x2="165.1" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="25.4" x2="167.64" y2="25.4" width="0.1524" layer="91"/>
-<junction x="167.64" y="25.4"/>
+<pinref part="U$1" gate="G$1" pin="OUT-"/>
+<wire x1="154.78" y1="24.94" x2="167.64" y2="24.94" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="24.94" x2="167.64" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="JP2" gate="A" pin="1"/>
+<wire x1="172.72" y1="30.48" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="172.72" y1="27.94" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="27.94" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="OUT+"/>
+<wire x1="154.78" y1="31.44" x2="167.64" y2="31.44" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="31.44" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
+<junction x="167.64" y="30.48"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="IN+"/>
+<wire x1="134.28" y1="31.44" x2="124.46" y2="31.44" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="31.44" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="IN-"/>
+<wire x1="134.28" y1="24.94" x2="124.46" y2="24.94" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="24.94" x2="124.46" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

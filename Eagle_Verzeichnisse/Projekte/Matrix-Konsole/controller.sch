@@ -4530,6 +4530,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="R4" library="resistor" deviceset="R-EU_" device="M3516" value="10k"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="M3516" value="10k"/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="M3516" value="10k"/>
+<part name="C7" library="eagle-ltspice" deviceset="C" device="" value="100n"/>
 </parts>
 <sheets>
 <sheet>
@@ -4569,6 +4570,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="R4" gate="G$1" x="-106.68" y="40.64"/>
 <instance part="R5" gate="G$1" x="-198.12" y="-48.26"/>
 <instance part="R6" gate="G$1" x="-96.52" y="-48.26"/>
+<instance part="C7" gate="G$1" x="55.88" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -4579,6 +4581,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="35.56" y1="30.48" x2="38.1" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="30.48" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="30.48" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="30.48" x2="48.26" y2="25.4" width="0.1524" layer="91"/>
+<junction x="38.1" y="30.48"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="48.26" y1="25.4" x2="55.88" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="INH"/>
@@ -4835,8 +4842,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="VCC"/>
-<wire x1="35.56" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
-<label x="45.72" y="33.02" size="1.778" layer="95" xref="yes"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="33.02" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-91.44" y1="-48.26" x2="-86.36" y2="-48.26" width="0.1524" layer="91"/>
