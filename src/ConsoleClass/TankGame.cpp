@@ -91,22 +91,30 @@ void TankGame::quit()
 
 void TankGame::menu_init()
 {
-
+   console->fillScreen(console->Color(BLACK));
+   console->setTextColor(console->Color(WHITE));
+   console->setTextSize(1);    // size 1 == 8 pixels high
 }
 
 void TankGame::menu_update()
 {
-
+   
 }
 
 void TankGame::menu_render()
 {
-
+  console->setCursor(0, 12);
+ 
+  console->print('T'); 
+  console->print('A');
+  console->print('N');
+  console->print('K'); 
+  console->print('S');
 }
 
 void TankGame::menu_quit()
 {
-  
+  console->fillScreen(console->Color(BLACK));
 }
 
 void TankGame::checkCollisions(Tank& t1,Tank& t2)
