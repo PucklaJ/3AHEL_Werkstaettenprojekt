@@ -84,12 +84,12 @@ class Console : public RGBmatrixPanel
     void setScoreString(byte,const char*);
     void setScoreNumber(byte,unsigned int);
 
-    float getBrightness();
+    float getBrightness() const;
 
-    uint16_t Color(float,float,float);
-    uint16_t Color(const ColorRGB&);
+    uint16_t Color(float,float,float) const;
+    uint16_t Color(const ColorRGB&) const;
 
-    const Controller& getController(byte c) {return m_controllers[c];}
+    const Controller& getController(byte c) const {return m_controllers[c];}
 
     void setGame(byte,Game*);
 

@@ -27,10 +27,10 @@ class Controller
     void setPressed(byte);
     void update();
 
-    bool isPressed(byte);
-    bool justPressed(byte);
+    bool isPressed(byte) const;
+    bool justPressed(byte) const;
 
-    bool isConnected();
+    bool isConnected() const;
 
   private:
     byte m_pressed = 0;

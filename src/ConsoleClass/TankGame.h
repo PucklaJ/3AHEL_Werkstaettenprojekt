@@ -44,6 +44,7 @@
 #define NOSE_Y(t) (t.direction == DOWN ? t.position.y+2 : (t.direction == LEFT ? t.position.y+1 : (t.direction == UP ? t.position.y-1 : t.position.y+1)))
 #define CONTROL 3
 #define NUM_TANKS 4
+#define SHOOT_COOLDOWN 5
 
 class Bullet
 {
@@ -54,6 +55,7 @@ class Bullet
     Vec2 position;
     byte direction;
 
+    void update();
     void render(Console*);
 };
 
@@ -80,6 +82,8 @@ class Tank
     byte direction;
     Bullet bullet;
     ColorRGB color;
+    byte shootTime = 0;
+    
 
     void rotate(byte);
     void move(byte);
@@ -93,6 +97,7 @@ class Tank
 
     bool isInRange(Tank&);
 
+    void update(const Controller&);
     void render(Console*);
 };
 
@@ -119,6 +124,25 @@ private:
   Tank tanks[NUM_TANKS];
   Wall walls[WALL_AMOUNT];
   
+};
+
+class TankGameWrapper : public Game
+{
+  public:
+    TankGameWrapper(Console*);
+    ~TankGameWrapper();
+  
+    void init() override;
+    void update() override;
+    void render() override;
+    void quit() override;
+  
+    void menu_init() override;
+    void menu_update() override;
+    void menu_render() override;
+    void menu_quit() override;
+   private:
+    TankGame* m_tankGame = nullptr;
 };
 
 #endif
