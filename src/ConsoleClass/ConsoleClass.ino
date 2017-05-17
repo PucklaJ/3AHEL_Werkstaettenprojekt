@@ -5,7 +5,7 @@
 #define TANK_GAME_INDEX 0
 
 Console console;
-TankGame tankGame(&console);
+TankGameWrapper tankGame(&console);
 
 
 void setup()

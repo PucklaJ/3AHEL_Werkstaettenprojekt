@@ -63,32 +63,10 @@ void TankGame::update()
 {
   for(int i = 0;i<NUM_TANKS;i++)
   {
-      if(tanks[i].bullet.position.x < 0 || tanks[i].bullet.position.x >= WIDTH || tanks[i].bullet.position.y < 0 || tanks[i].bullet.position.y >= HEIGHT)
-      {
-          tanks[i].bullet.position.x = NONE;
-      }
-      
-      if(tanks[i].bullet.position.x != NONE)
-      {
-          switch(tanks[i].bullet.direction)
-          {
-              case DOWN:
-                  tanks[i].bullet.position.y+=BULLET_SPEED;
-                  break;
-              case LEFT:
-                  tanks[i].bullet.position.x-=BULLET_SPEED;
-                  break;
-              case UP:
-                  tanks[i].bullet.position.y-=BULLET_SPEED;
-                  break;
-              case RIGHT:
-                  tanks[i].bullet.position.x+=BULLET_SPEED;
-                  break;
-          }
-      }
+      tanks[i].update(console->getController(i));
   }
     
-    checkCollisions();
+  checkCollisions();
 }
 
 void TankGame::render()
@@ -113,22 +91,30 @@ void TankGame::quit()
 
 void TankGame::menu_init()
 {
-
+   console->fillScreen(console->Color(BLACK));
+   console->setTextColor(console->Color(WHITE));
+   console->setTextSize(1);    // size 1 == 8 pixels high
 }
 
 void TankGame::menu_update()
 {
-
+   
 }
 
 void TankGame::menu_render()
 {
-
+  console->setCursor(0, 12);
+ 
+  console->print('T'); 
+  console->print('A');
+  console->print('N');
+  console->print('K'); 
+  console->print('S');
 }
 
 void TankGame::menu_quit()
 {
-  
+  console->fillScreen(console->Color(BLACK));
 }
 
 void TankGame::checkCollisions(Tank& t1,Tank& t2)
@@ -345,6 +331,44 @@ void Tank::move(byte m)
       }
   }
 }
+
+void Tank::update(const Controller& c)
+{
+    if(shootTime > 0)
+      shootTime--;
+  
+   if(c.isConnected())
+   {
+
+    // Movement Control
+    byte dir = (c.isPressed(BUT_UP) ? UP : (c.isPressed(BUT_DOWN) ? DOWN : NONE));
+
+    if(dir != NONE)
+    {
+      move(dir);
+    }
+
+    // Rotate control
+
+    byte rot = (c.isPressed(BUT_LEFT) ? LEFT : (c.isPressed(BUT_RIGHT) ? RIGHT : NONE));
+
+    if(rot != NONE)
+    {
+      rotate(rot);
+    }
+
+    // Shoot control
+
+    if(c.justPressed(BUT_A))
+    {
+      shoot();
+    }
+    
+   }
+  
+   bullet.update();
+}
+
 void Tank::shoot()
 {
   if(direction == DOWN)
@@ -367,6 +391,8 @@ void Tank::shoot()
       bullet.position.x = position.x + 2;
       bullet.position.y = position.y + 1;
   }
+
+  shootTime = SHOOT_COOLDOWN;
   
   bullet.direction = direction;
 }
@@ -446,8 +472,83 @@ void Bullet::render(Console* c)
   c->drawPixel(position.x,position.y,c->Color(CB));
 }
 
+void Bullet::update()
+{
+  if(position.x < 0 || position.x >= WIDTH || position.y < 0 || position.y >= HEIGHT)
+    {
+        position.x = NONE;
+    }
+    
+    if(position.x != NONE)
+    {
+        switch(direction)
+        {
+            case DOWN:
+                position.y+=BULLET_SPEED;
+                break;
+            case LEFT:
+                position.x-=BULLET_SPEED;
+                break;
+            case UP:
+                position.y-=BULLET_SPEED;
+                break;
+            case RIGHT:
+                position.x+=BULLET_SPEED;
+                break;
+        }
+    }
+}
+
 void Wall::render(Console* c)
 {
   c->fillRect(position.x,position.y,width,height,c->Color(CW));
+}
+
+TankGameWrapper::TankGameWrapper(Console* c) : Game(c)
+{
+  
+}
+
+TankGameWrapper::~TankGameWrapper()
+{
+  
+}
+
+void TankGameWrapper::init()
+{
+  m_tankGame = new TankGame(console);
+  m_tankGame->init();
+}
+void TankGameWrapper::update()
+{
+  m_tankGame->update();
+}
+void TankGameWrapper::render()
+{
+  m_tankGame->render();
+}
+void TankGameWrapper::quit()
+{
+  m_tankGame->quit();
+  delete m_tankGame;
+}
+
+void TankGameWrapper::menu_init()
+{
+  m_tankGame = new TankGame(console);
+  m_tankGame->menu_init();
+}
+void TankGameWrapper::menu_update()
+{
+  m_tankGame->menu_update();
+}
+void TankGameWrapper::menu_render()
+{
+  m_tankGame->menu_render();
+}
+void TankGameWrapper::menu_quit()
+{
+  m_tankGame->menu_quit();
+  delete m_tankGame;
 }
 

@@ -18,17 +18,17 @@ void Controller::update()
   m_previousPressed = m_pressed;
 }
 
-bool Controller::isPressed(byte but)
+bool Controller::isPressed(byte but) const
 {
   return !(m_pressed & but);
 }
 
-bool Controller::justPressed(byte but)
+bool Controller::justPressed(byte but) const
 {
   return !(m_pressed & but) && (m_previousPressed & but);
 }
 
-bool Controller::isConnected()
+bool Controller::isConnected() const
 {
   return m_pressed & (CONNECT1 | CONNECT2);
 }
