@@ -278,12 +278,12 @@ void Console::setScoreNumber(byte digit,unsigned int number)
   m_ledControl->setChar(0,(int)digit*2+1,((int)(number / pow(10,1))) % 10,true);
 }
 
-uint16_t Console::Color(float r,float g,float b) const
+uint16_t Console::Color(float r,float g,float b)
 {
   return Color888((uint8_t)(r*m_brightness),(uint8_t)(g*m_brightness),(uint8_t)(b*m_brightness));
 }
 
-uint16_t Console::Color(const ColorRGB& col) const
+uint16_t Console::Color(const ColorRGB& col)
 {
   return Color(col.r,col.g,col.b);
 }

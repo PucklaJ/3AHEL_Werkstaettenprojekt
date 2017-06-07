@@ -45,6 +45,8 @@
 #define CONTROL 3
 #define NUM_TANKS 4
 #define SHOOT_COOLDOWN 5
+#define PREV_POS_X(b) (b.direction == LEFT ? b.position.x+1 : (b.direction == RIGHT ? b.position.x-1 : b.position.x))
+#define PREV_POS_Y(b) (b.direction == UP ? b.position.y+1 : (b.direction == DOWN ? b.position.y-1 : b.position.y))
 
 class Bullet
 {
@@ -83,6 +85,7 @@ class Tank
     Bullet bullet;
     ColorRGB color;
     byte shootTime = 0;
+    bool dead = false;
     
 
     void rotate(byte);
@@ -117,8 +120,12 @@ public:
 	void menu_render() override;
 	void menu_quit() override;
 private:
+  void restart();
+
   void checkCollisions(Tank&,Tank&);
   void checkCollisions(Tank&,Wall&);
+  void checkCollisions(Tank&,Bullet&);
+  void checkCollisions(Bullet&,Wall&);
   void checkCollisions();
 
   Tank tanks[NUM_TANKS];

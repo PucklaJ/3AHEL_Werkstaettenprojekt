@@ -86,8 +86,8 @@ class Console : public RGBmatrixPanel
 
     float getBrightness() const;
 
-    uint16_t Color(float,float,float) const;
-    uint16_t Color(const ColorRGB&) const;
+    uint16_t Color(float,float,float);
+    uint16_t Color(const ColorRGB&);
 
     const Controller& getController(byte c) const {return m_controllers[c];}
 
