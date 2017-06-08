@@ -551,13 +551,18 @@ bool Tank::isInRange(Tank& t)
 
 void Tank::render(Console* c)
 {
-  if(prevPosition.x != position.x || prevPosition.y != position.y)
+  if(dead || (prevPosition.x != position.x || prevPosition.y != position.y))
   {
     c->fillRect(prevPosition.x,prevPosition.y,TANK_WIDTH_PREV((*this)),TANK_HEIGHT_PREV((*this)),c->Color(BLACK));
     c->drawPixel(NOSE_X_PREV((*this)),NOSE_Y_PREV((*this)),c->Color(BLACK));
   }
-  c->fillRect(position.x,position.y,TANK_WIDTH((*this)),TANK_HEIGHT((*this)),c->Color(color));
-  c->drawPixel(NOSE_X((*this)),NOSE_Y((*this)),c->Color(CN));
+
+  if(!dead)
+  {
+    c->fillRect(position.x,position.y,TANK_WIDTH((*this)),TANK_HEIGHT((*this)),c->Color(color));
+    c->drawPixel(NOSE_X((*this)),NOSE_Y((*this)),c->Color(CN));
+  }
+  
 
   if(bullet.prevPosition.x != NONE)
     bullet.render(c);
