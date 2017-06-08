@@ -60,16 +60,58 @@ void TankGame::init()
   walls[3].height = 1;
 }
 
+int numDead=0;
+
 void TankGame::update()
 {
+  numDead = 0;
   for(int i = 0;i<NUM_TANKS;i++)
   {
-      tanks[i].update(console->getController(i));
+      if(tanks[i].dead)
+      {
+        numDead++;
+      }
+      else
+      {
+        tanks[i].update(console->getController(i));
+      }
   }
 
   console->getMAX()->setDigit(0,3,0,false);
     
   checkCollisions();
+}
+
+void TankGame::restart()
+{
+  for(int i = 0;i<NUM_TANKS;i++)
+  {
+      tanks[i].direction = 0;
+      tanks[i].bullet.position.x = NONE;
+      tanks[i].bullet.position.y = NONE;
+      tanks[i].dead = false;
+  }
+  
+  tanks[0].position.x = ONE_S_X;
+  tanks[0].position.y = ONE_S_Y;
+  tanks[0].color = ColorRGB(C1);
+  for(int i = 0;i<ONE_S_R;i++)
+      tanks[0].rotate(RIGHT);
+  tanks[1].position.x = TWO_S_X;
+  tanks[1].position.y = TWO_S_Y;
+  tanks[1].color = ColorRGB(C2);
+  for(int i = 0;i<TWO_S_R;i++)
+      tanks[1].rotate(RIGHT);
+  tanks[2].position.x = THREE_S_X;
+  tanks[2].position.y = THREE_S_Y;
+  tanks[2].color = ColorRGB(C3);
+  for(int i = 0;i<THREE_S_R;i++)
+      tanks[2].rotate(RIGHT);
+  tanks[3].position.x = FOUR_S_X;
+  tanks[3].position.y = FOUR_S_Y;
+  tanks[3].color = ColorRGB(C4);
+  for(int i = 0;i<FOUR_S_R;i++)
+      tanks[3].rotate(RIGHT);
 }
 
 void TankGame::render()
@@ -84,6 +126,12 @@ void TankGame::render()
   for(int i = 0;i<NUM_TANKS;i++)
   {
     tanks[i].render(console);
+  }
+
+  if(numDead > 2)
+  {
+    delay(2000);
+    restart();
   }
 }
 
@@ -224,15 +272,47 @@ void TankGame::checkCollisions()
 {
   for(int i = 0;i<NUM_TANKS;i++)
   {
+      if(tanks[i].dead)
+        continue;
+
       for(int j = 0;j<WALL_AMOUNT;j++)
       {
           checkCollisions(tanks[i],walls[j]);
+          checkCollisions(tanks[i].bullet,walls[j]);
       }
       for(int j = i+1;j<NUM_TANKS;j++)
       {
           if(tanks[i].isInRange(tanks[j]))
               checkCollisions(tanks[i],tanks[j]);
+
+          if(tanks[j].bullet.position.x != NONE)
+            checkCollisions(tanks[i],tanks[j].bullet);
       }
+  }
+}
+
+void TankGame::checkCollisions(Tank& t,Bullet& b)
+{
+  if(((t.position.x < b.position.x && t.position.x + TANK_WIDTH(t) > b.position.x &&
+       t.position.y < b.position.y && t.position.y + TANK_HEIGHT(t) > b.position.y) ||
+     (NOSE_X(t) == b.position.x && NOSE_Y(t) == b.position.y)) || 
+     ((t.position.x < PREV_POS_X(b) && t.position.x + TANK_WIDTH(t) > PREV_POS_X(b) &&
+       t.position.y < PREV_POS_Y(b) && t.position.y + TANK_HEIGHT(t) > PREV_POS_Y(b) ||
+     (NOSE_X(t) == PREV_POS_X(b) && NOSE_Y(t) == PREV_POS_Y(b)))))
+  {
+     b.position.x = b.position.y = NONE;
+     t.dead = true;
+  }
+}
+
+void TankGame::checkCollisions(Bullet& b,Wall& w)
+{
+  if((w.position.x < b.position.x && w.position.x + w.width > b.position.x &&
+       w.position.y < b.position.y && w.position.y + w.height > b.position.y) || 
+     (w.position.x < PREV_POS_X(b) && w.position.x + w.width > PREV_POS_X(b) &&
+       w.position.y < PREV_POS_Y(b) && w.position.y + w.height > PREV_POS_Y(b)))
+  {
+     b.position.x = b.position.y = NONE;
   }
 }
 

@@ -171,13 +171,13 @@ void Console::menuControl()
 
 void Console::playControl()
 {
-  for(int i = 0;i<4;i++)
+  /*for(int i = 0;i<4;i++)
   {
     if(m_controllers[i].isConnected())
       return;
   }
 
-  switchState(MENU_STATE);
+  switchState(MENU_STATE);*/
 }
 
 void Console::quit()

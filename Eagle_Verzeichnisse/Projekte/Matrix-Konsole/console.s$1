@@ -1629,7 +1629,6 @@ DIN A3, landscape with location and doc. field</description>
 <sheets>
 <sheet>
 <plain>
-<text x="187.96" y="-88.9" size="1.778" layer="104">LED-Matrix-Console</text>
 </plain>
 <instances>
 <instance part="X1" gate="-1" x="-25.4" y="38.1"/>
