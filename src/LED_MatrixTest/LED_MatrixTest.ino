@@ -90,7 +90,7 @@ void loop()
 
   
 
-  matrix.fillScreen(matrix.Color888(0,0,0));
+  matrix.fillScreen(matrix.Color888(255,255,255));
 
   matrix.drawPixel(pos[0],pos[1],matrix.Color888(255.0/BRIGHT,255.0/BRIGHT,255.0/BRIGHT));
 

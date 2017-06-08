@@ -12,18 +12,18 @@
 #define MATRIX_LAT 10
 #define MATRIX_OE 9
 
-#define MAX_DATA 12
-#define MAX_CLK 14
-#define MAX_CS 15
+#define MAX_DATA 23
+#define MAX_CLK 32
+#define MAX_CS 31
 
 #define BRIGHT_POTI A4
 
-#define CON_SER1 16
-#define CON_SER2 17
-#define CON_SER3 18
-#define CON_SER4 19
-#define CON_CLK 20
-#define CON_PL 21
+#define CON_SER1 35
+#define CON_SER2 36
+#define CON_SER3 22
+#define CON_SER4 30
+#define CON_CLK 34
+#define CON_PL 33
 
 #define WHITE 255,255,255
 #define BLACK 0,0,0
@@ -45,8 +45,8 @@ class Game;
 
 struct Vec2
 {
-  byte x;
-  byte y;
+  int x;
+  int y;
 };
 
 struct ColorRGB
@@ -86,10 +86,11 @@ class Console : public RGBmatrixPanel
 
     float getBrightness() const;
 
-    uint16_t Color(float,float,float) const;
-    uint16_t Color(const ColorRGB&) const;
+    uint16_t Color(float,float,float);
+    uint16_t Color(const ColorRGB&);
 
     const Controller& getController(byte c) const {return m_controllers[c];}
+    LedControl* getMAX() {return m_ledControl;}
 
     void setGame(byte,Game*);
 

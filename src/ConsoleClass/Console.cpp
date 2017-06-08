@@ -18,9 +18,12 @@ Console::~Console()
 
 void Console::init()
 {
-	begin();
-  initMAX();
   initPins();
+  initMAX();
+	begin();
+  
+
+  Serial.begin(9600);
   
   readBrightness();
 
@@ -36,8 +39,19 @@ void Console::initMAX()
 {
   m_ledControl = new LedControl(MAX_DATA,MAX_CLK,MAX_CS,1);
   m_ledControl->shutdown(0,false);
-  m_ledControl->setScanLimit(0,8);
   m_ledControl->setIntensity(0,15);
+
+  for(int i=0;i<13;i++) {
+    m_ledControl->setDigit(0,7,i,false);
+    m_ledControl->setDigit(0,6,i+1,false);
+    m_ledControl->setDigit(0,5,i+2,false);
+    m_ledControl->setDigit(0,4,i+3,false);
+    m_ledControl->setDigit(0,3,i+4,false);
+    m_ledControl->setDigit(0,2,i+5,false);
+    m_ledControl->setDigit(0,1,i+6,false);
+    m_ledControl->setDigit(0,0,i+7,false);
+    delay(400);
+  }
 }
 
 void Console::initPins()
@@ -49,7 +63,7 @@ void Console::initPins()
   pinMode(CON_SER4,INPUT);
   digitalWrite(CON_CLK,LOW);
   pinMode(CON_CLK,OUTPUT);
-  digitalWrite(CON_PL,LOW);
+  digitalWrite(CON_PL,HIGH);
   pinMode(CON_PL,OUTPUT);
 }
 
@@ -118,17 +132,17 @@ void Console::menuControl()
 
   for(int i = 0;i<4;i++)
   {
-    if(m_controllers[i].justPressed(BUT_LEFT))
+    if(false && m_controllers[i].justPressed(BUT_LEFT))
     {
       control = 1;
       break;
     }
-    else if(m_controllers[i].justPressed(BUT_RIGHT))
+    else if(false && m_controllers[i].justPressed(BUT_RIGHT))
     {
       control = 2;
       break;
     }
-    else if(m_controllers[i].justPressed(BUT_A))
+    else if(true || m_controllers[i].justPressed(BUT_A))
     {
       control = 3;
       break;
@@ -218,17 +232,14 @@ void Console::switchState(byte state)
 void Console::testStartup()
 {
   fillScreen(this->Color(WHITE));
-  for(int i = 0;i<4;i++)
-  {
-    setScoreNumber(i,88);
-  }
+  //for(int i = 0;i<8;i++)
+  //{
+  //  m_ledControl->setDigit(0,8,i,false);
+  //}
 
   delay(1000);
   fillScreen(this->Color(BLACK));
-  for(int i = 0;i<4;i++)
-  {
-    setScoreNumber(i,00);
-  }
+  m_ledControl->clearDisplay(0);
   
 }
 
@@ -245,8 +256,8 @@ void Console::readBrightness()
 void Console::readInput()
 {
   // Load the button states into shift register
-  digitalWrite(CON_PL,HIGH);
   digitalWrite(CON_PL,LOW);
+  digitalWrite(CON_PL,HIGH);
 
   byte data = 0;
 
@@ -265,8 +276,8 @@ void Console::setScoreString(byte digit,const char* letter)
   if(digit > 4)
     return;
     
-  m_ledControl->setChar(0,(int)digit*2,letter[1],true);
-  m_ledControl->setChar(0,(int)digit*2+1,letter[0],true);
+  m_ledControl->setChar(0,(int)digit*2,letter[1],false);
+  m_ledControl->setChar(0,(int)digit*2+1,letter[0],false);
 }
 
 void Console::setScoreNumber(byte digit,unsigned int number)
@@ -274,16 +285,16 @@ void Console::setScoreNumber(byte digit,unsigned int number)
   if(digit > 4 || number > 99)
     return;
     
-  m_ledControl->setChar(0,(int)digit*2,((int)(number / pow(10,0))) % 10,true);
-  m_ledControl->setChar(0,(int)digit*2+1,((int)(number / pow(10,1))) % 10,true);
+  m_ledControl->setDigit(0,(int)digit*2,((int)(number / pow(10,0))) % 10,false);
+  m_ledControl->setDigit(0,(int)digit*2+1,((int)(number / pow(10,1))) % 10,false);
 }
 
-uint16_t Console::Color(float r,float g,float b) const
+uint16_t Console::Color(float r,float g,float b)
 {
   return Color888((uint8_t)(r*m_brightness),(uint8_t)(g*m_brightness),(uint8_t)(b*m_brightness));
 }
 
-uint16_t Console::Color(const ColorRGB& col) const
+uint16_t Console::Color(const ColorRGB& col)
 {
   return Color(col.r,col.g,col.b);
 }

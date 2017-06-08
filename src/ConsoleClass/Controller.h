@@ -8,12 +8,12 @@
  #include "pins_arduino.h"
 #endif
 
-#define BUT_UP 1
-#define BUT_DOWN 2
+#define BUT_UP 2
+#define BUT_DOWN 1
 #define BUT_LEFT 4
 #define BUT_RIGHT 8
-#define BUT_A 16
-#define BUT_B 32
+#define BUT_A 32
+#define BUT_B 16
 #define CONNECT1 64
 #define CONNECT2 128
 

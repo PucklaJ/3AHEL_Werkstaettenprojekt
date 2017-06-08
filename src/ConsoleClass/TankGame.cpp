@@ -1,5 +1,6 @@
 #include "TankGame.h"
 #include "Console.h"
+#include <stdlib.h>
 
 TankGame::TankGame(Console* console) : Game(console)
 {
@@ -65,13 +66,15 @@ void TankGame::update()
   {
       tanks[i].update(console->getController(i));
   }
+
+  console->getMAX()->setDigit(0,3,0,false);
     
   checkCollisions();
 }
 
 void TankGame::render()
 {
-  console->fillScreen(console->Color(BLACK));
+  //console->fillScreen(console->Color(BLACK));
 
   for(int i = 0;i<WALL_AMOUNT;i++)
   {
@@ -235,6 +238,8 @@ void TankGame::checkCollisions()
 
 void Tank::rotate(byte r)
 {
+    //return;
+  
     if(r == RIGHT)
     {
         if(direction == DOWN)
@@ -292,6 +297,8 @@ void Tank::rotate(byte r)
 }
 void Tank::move(byte m)
 {
+ // return;
+  
   if(m == UP)
   {
       if(direction == DOWN)
@@ -334,6 +341,12 @@ void Tank::move(byte m)
 
 void Tank::update(const Controller& c)
 {
+    bullet.update();
+  
+    prevPosition.x = position.x;
+    prevPosition.y = position.y;
+    prevDirection = direction;
+  
     if(shootTime > 0)
       shootTime--;
   
@@ -365,8 +378,6 @@ void Tank::update(const Controller& c)
     }
     
    }
-  
-   bullet.update();
 }
 
 void Tank::shoot()
@@ -460,21 +471,31 @@ bool Tank::isInRange(Tank& t)
 
 void Tank::render(Console* c)
 {
+  if(prevPosition.x != position.x || prevPosition.y != position.y)
+  {
+    c->fillRect(prevPosition.x,prevPosition.y,TANK_WIDTH_PREV((*this)),TANK_HEIGHT_PREV((*this)),c->Color(BLACK));
+    c->drawPixel(NOSE_X_PREV((*this)),NOSE_Y_PREV((*this)),c->Color(BLACK));
+  }
   c->fillRect(position.x,position.y,TANK_WIDTH((*this)),TANK_HEIGHT((*this)),c->Color(color));
   c->drawPixel(NOSE_X((*this)),NOSE_Y((*this)),c->Color(CN));
 
-  if(bullet.position.x != NONE)
+  if(bullet.prevPosition.x != NONE)
     bullet.render(c);
 }
 
 void Bullet::render(Console* c)
 {
+  if(prevPosition.x != position.x || prevPosition.y != position.y)
+    c->drawPixel(prevPosition.x,prevPosition.y,c->Color(BLACK));
   c->drawPixel(position.x,position.y,c->Color(CB));
 }
 
 void Bullet::update()
 {
-  if(position.x < 0 || position.x >= WIDTH || position.y < 0 || position.y >= HEIGHT)
+  prevPosition.x = position.x;
+  prevPosition.y = position.y;
+  
+  if(position.x != NONE && (position.x < 0 || position.x >= WIDTH || position.y < 0 || position.y >= HEIGHT))
     {
         position.x = NONE;
     }
