@@ -13,7 +13,7 @@
 void setup()
 {
   pinMode(CON_SER1,INPUT);
-  digitalWrite(CON_PL,LOW);
+  digitalWrite(CON_PL,HIGH);
   pinMode(CON_PL,OUTPUT);
   digitalWrite(CON_CLK,LOW);
   pinMode(CON_CLK,OUTPUT);
